@@ -88,12 +88,12 @@ read -p "Press Enter to continue or Ctrl+C to abort..."
 git tag -a "$new_tag" -m "Release $new_tag: $commit_message"
 echo -e "${GREEN}✓ Tag $new_tag created${NC}\n"
 
-# 10. Push to main branch
-echo -e "${BLUE}Step 6: Pushing to main...${NC}"
-if git push origin main; then
-    echo -e "${GREEN}✓ Pushed to main${NC}\n"
+# 10. Push to master branch
+echo -e "${BLUE}Step 6: Pushing to master...${NC}"
+if git push origin master; then
+    echo -e "${GREEN}✓ Pushed to master${NC}\n"
 else
-    echo -e "${RED}✗ Push to main failed${NC}"
+    echo -e "${RED}✗ Push to master failed${NC}"
     exit 1
 fi
 
@@ -112,4 +112,4 @@ echo -e "${GREEN}   Deployment Complete! 🚀${NC}"
 echo -e "${GREEN}=====================================${NC}"
 echo -e "Commit: ${YELLOW}$commit_message${NC}"
 echo -e "Tag: ${YELLOW}$new_tag${NC}"
-echo -e "Branch: ${YELLOW}main${NC}\n"
+echo -e "Branch: ${YELLOW}master${NC}\n"
