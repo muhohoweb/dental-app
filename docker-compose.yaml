@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: dental_app_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: q8wKV5987jVFoD
+      MYSQL_DATABASE: dental_app
+      MYSQL_USER: dental_admin
+      MYSQL_PASSWORD: yTWv6Fn4R4jaNy
+    ports:
+      - "3307:3306"
+    volumes:
+      - dental_data:/var/lib/mysql
+    networks:
+      - dental_network
+
+volumes:
+  dental_data:
+    driver: local
+
+networks:
+  dental_network:
+    driver: bridge
