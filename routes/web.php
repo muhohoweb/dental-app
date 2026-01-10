@@ -50,7 +50,9 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         ->name('services.')
         ->group(function () {
             Route::get('/', 'index')->name('index');
-            Route::post('/', 'store')->name('services.store');
+            Route::post('/', 'store')->name('store');
+            Route::put('/{service}', 'update')->name('update');
+            Route::delete('/{service}', 'destroy')->name('destroy');
         });
 });
 
