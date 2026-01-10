@@ -40,7 +40,7 @@ const stats = [
     },
     {
         title: 'Total Revenue',
-        value: '$45,231',
+        value: 'Ksh 45,231',
         change: '+8%',
         trend: 'up',
         icon: DollarSign,
