@@ -177,7 +177,7 @@ const confirmDelete = () => {
                                 </div>
 
                                 <div class="grid gap-2">
-                                    <Label for="create-price">Base Price ($)</Label>
+                                    <Label for="create-price">Base Price (Ksh)</Label>
                                     <Input
                                         id="create-price"
                                         v-model="createForm.base_price"
@@ -239,7 +239,7 @@ const confirmDelete = () => {
                             <TableCell class="font-medium">{{ index + 1 }}</TableCell>
                             <TableCell class="font-medium">{{ service.name }}</TableCell>
                             <TableCell class="max-w-xs truncate">{{ service.description }}</TableCell>
-                            <TableCell>${{ service.base_price }}</TableCell>
+                            <TableCell>Ksh {{ service.base_price }}</TableCell>
                             <TableCell>{{ service.turnaround_days }} days</TableCell>
                             <TableCell>{{ service.created_at }}</TableCell>
                             <TableCell class="text-right">
@@ -307,7 +307,7 @@ const confirmDelete = () => {
                         </div>
 
                         <div class="grid gap-2">
-                            <Label for="edit-price">Base Price ($)</Label>
+                            <Label for="edit-price">Base Price (Ksh)</Label>
                             <Input
                                 id="edit-price"
                                 v-model="editForm.base_price"
