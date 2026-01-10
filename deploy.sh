@@ -81,8 +81,7 @@ IFS='.' read -r major minor patch <<< "$version"
 patch=$((patch + 1))
 new_tag="v$major.$minor.$patch"
 
-echo -e "New tag: ${GREEN}$new_tag${NC}"
-read -p "Press Enter to continue or Ctrl+C to abort..."
+echo -e "New tag: ${GREEN}$new_tag${NC}\n"
 
 # 9. Create the tag
 git tag -a "$new_tag" -m "Release $new_tag: $commit_message"
